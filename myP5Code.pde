@@ -30,18 +30,23 @@ draw = function(){
     drawFish3(250+fishx1,50);
     drawFish4(70+fishx1,150);
     drawFish5(270+fishx1,100);
-    
+    drawShark(500+fishx1,100);
+    drawOyster(170,350);
+    drawAnchor(400,300);
+    if(fishx1<-600){
+   fishx1=400;
+   }
 //Animation code goes here
 //stroke
 ellipse(82,bubbleY5,10,10)
 bubbleY5=bubbleY5-6;
  ellipse(168,bubbleY4,10,10)
  bubbleY4=bubbleY4-1;
- ellipse(263,bubbleY3,10,10)
+ ellipse(263,bubbleY3,7,7)
  bubbleY3=bubbleY3-4;
- ellipse(338,bubbleY2,10,10)
+ ellipse(338,bubbleY2,5,5)
  bubbleY2=bubbleY2-3;
- ellipse(420,bubbleY1,10,10)
+ ellipse(420,bubbleY1,20,20)
  bubbleY1=bubbleY1-5;
  ellipse(500,bubbleY,10,10)
   bubbleY=bubbleY-2 ;
@@ -64,14 +69,13 @@ bubbleY5=bubbleY5-6;
     if(bubbleY5<0){
    bubbleY5=400;
    }
-   
-   
    }
   
 
 //🟢mouseClicked Function - will run when mouse is clicked
 mouseClicked = function(){
 
+drawFishO(100,100);
 };
 
 //🟡draw Function - will run when called
@@ -139,4 +143,22 @@ var drawFish5 = function(fishX, fishY){
   textSize(50);
   text("🐟", fishX, fishY);
 };   
+
+var drawShark = function(sharkX, sharkY){
+  textSize(70);
+  text("🦈", sharkX, sharkY);
+};   
+
+var drawOyster = function(oysterX, oysterY){
+  textSize(30);
+  text("🦪", oysterX, oysterY);
+};   
+var drawAnchor = function(anchorX, anchorY){
+  textSize(40);
+  text("⚓", anchorX, anchorY);
+};   
+var drawFishO = function(fishoX, fishoY){
+  textSize(40);
+  text("🐠", fishoX, fishoY);
+};  
 
